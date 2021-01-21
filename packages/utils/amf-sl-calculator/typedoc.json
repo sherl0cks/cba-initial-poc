@@ -1,0 +1,7 @@
+{
+    "entryPoints": ["./src/sl-calculator.ts"],
+    "out": "docs",
+    "exclude": ["**/**(index|.test).ts"],
+    "name": "Solar Calculator",
+    "includeVersion": true
+}
