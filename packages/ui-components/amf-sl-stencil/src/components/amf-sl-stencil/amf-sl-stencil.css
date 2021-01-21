@@ -3,8 +3,12 @@
   padding:20px;
   background:black;
   text-align:center;
+  color:white;
 }
 
-:host div h2{
-  color:white;
+:host div li,
+:host div ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

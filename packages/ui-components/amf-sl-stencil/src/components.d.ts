@@ -6,36 +6,35 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        "btnText": string;
-        "countTo": number;
+    interface AmfSlStencil {
+        "numbers": number[];
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAmfSlStencilElement extends Components.AmfSlStencil, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAmfSlStencilElement: {
+        prototype: HTMLAmfSlStencilElement;
+        new (): HTMLAmfSlStencilElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "amf-sl-stencil": HTMLAmfSlStencilElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        "btnText"?: string;
-        "countTo"?: number;
+    interface AmfSlStencil {
+        "numbers"?: number[];
+        "onTotalChanged"?: (event: CustomEvent<number>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "amf-sl-stencil": AmfSlStencil;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "amf-sl-stencil": LocalJSX.AmfSlStencil & JSXBase.HTMLAttributes<HTMLAmfSlStencilElement>;
         }
     }
 }

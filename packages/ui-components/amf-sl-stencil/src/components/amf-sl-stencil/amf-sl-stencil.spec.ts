@@ -1,36 +1,36 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { AmfSlStencil } from './amf-sl-stencil';
 
-describe('my-component', () => {
+describe('amf-sl-stencil', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [MyComponent],
-      html: '<my-component></my-component>',
+      components: [AmfSlStencil],
+      html: '<amf-sl-stencil></amf-sl-stencil>',
     });
     expect(root).toEqualHtml(`
-      <my-component>
+      <amf-sl-stencil>
         <mock:shadow-root>
           <div>
             Hello, World! I'm
           </div>
         </mock:shadow-root>
-      </my-component>
+      </amf-sl-stencil>
     `);
   });
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [MyComponent],
-      html: `<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>`,
+      components: [AmfSlStencil],
+      html: `<amf-sl-stencil first="Stencil" last="'Don't call me a framework' JS"></amf-sl-stencil>`,
     });
     expect(root).toEqualHtml(`
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
+      <amf-sl-stencil first="Stencil" last="'Don't call me a framework' JS">
         <mock:shadow-root>
           <div>
             Hello, World! I'm Stencil 'Don't call me a framework' JS
           </div>
         </mock:shadow-root>
-      </my-component>
+      </amf-sl-stencil>
     `);
   });
 });
