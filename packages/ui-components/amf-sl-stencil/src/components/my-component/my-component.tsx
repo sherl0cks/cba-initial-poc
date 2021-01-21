@@ -1,5 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h , State} from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -7,26 +6,20 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
+  @Prop() countTo: number = 100;
+  @Prop() btnText: string = "Text";
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+  @State() count: number = 0;
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+  private increaseCount = (): void => {
+    if(this.countTo > this.count)
+      this.count++;
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <div>
+        <h2>{this.count}</h2>
+        <button onClick={this.increaseCount}>{this.btnText}</button>
+      </div>;
   }
 }
