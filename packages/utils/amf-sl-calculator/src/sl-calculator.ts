@@ -1,7 +1,7 @@
 export class SlCalculator {
 
     /**
-     * Function to sum the given numbers
+     * Function to sum the given numbers.
      * @param numbers The numbers to sum
      * @returns A number with the sum result 
      */
