@@ -1,0 +1,21 @@
+name: Test pull request
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - name: Install dependencies
+        run: npm ci
+      - name: Boostrap Lerna
+        run: npm run lerna:bootstrap
+      - name: Test code
+        run: npm run lerna:test

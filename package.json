@@ -2,7 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "lerna": "lerna"
+    "lerna": "lerna",
+    "lerna:bootstrap": "lerna bootstrap --since origin/master",
+    "lerna:test": "lerna run test --since origin/master",
+    "lerna:publish": "lerna publish --yes"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
