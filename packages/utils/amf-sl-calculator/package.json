@@ -1,6 +1,6 @@
 {
   "name": "amf-sl-calculator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Test",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -12,7 +12,9 @@
     "lint": "eslint 'src**/*.ts'",
     "build-docs": "typedoc",
     "serve-docs": "npm run build-docs && npm run serve docs",
-    "serve": "serve"
+    "serve": "serve",
+    "prepublish": "npm run test",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
