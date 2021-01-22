@@ -19,18 +19,8 @@ jobs:
         run: npm ci
       - name: Bootstrap Lerna
         run: npm run lerna:bootstrap
-      - name: Build
-        run: npm run lerna:build
-      - name: Authenticate with Registry
-        run: |
-          echo "registry=https://registry.npmjs.org/" >> .npmrc
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
-          npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Deploy/publish to NPM
         run: npm run lerna:publish
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
