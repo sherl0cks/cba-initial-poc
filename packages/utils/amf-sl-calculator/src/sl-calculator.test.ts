@@ -12,14 +12,14 @@ describe("sum()", () => {
 
     describe("When given an invalid arg", () => {
         test("should throw an error", () => {
-            expect(() => calculator.sum(null)).toThrowError('invalid argument');
+            expect(() => calculator.sum(null as any)).toThrowError('invalid argument');
             expect(() => calculator.sum("hello" as any)).toThrow('invalid argument');
-            expect(() => calculator.sum(undefined)).toThrow('invalid argument');
+            expect(() => calculator.sum(undefined as any)).toThrow('invalid argument');
 
-            expect(() => calculator.sum(8, null)).toThrow('invalid argument');
-            expect(() => calculator.sum(3, 7, undefined)).toThrow('invalid argument');
-            expect(() => calculator.sum("" as any, null, 4, 5)).toThrow('invalid argument');
-            expect(() => calculator.sum(8, 9, 10, undefined, 18)).toThrow('invalid argument');
+            expect(() => calculator.sum(8, null as any)).toThrow('invalid argument');
+            expect(() => calculator.sum(3, 7, undefined as any)).toThrow('invalid argument');
+            expect(() => calculator.sum("" as any, null as any, 4, 5)).toThrow('invalid argument');
+            expect(() => calculator.sum(8, 9, 10, undefined as any, 18)).toThrow('invalid argument');
 
         });
     });
