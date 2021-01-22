@@ -16,7 +16,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm cache clean --force
-          rm -r node_modules
           npm ci
       - name: Bootstrap Lerna
         run: npm run lerna:bootstrap
