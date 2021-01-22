@@ -30,9 +30,7 @@ export class AmfSlStencil {
       <div>
         {numbers}
         <ul>
-          {
-            this.numbers.map( n => <li>{n}</li>)
-          }
+          { this.numbers.map( n => <li>{n}</li>) }
         </ul>
       </div>
     );
