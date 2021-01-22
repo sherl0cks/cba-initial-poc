@@ -17,5 +17,5 @@ jobs:
         run: npm ci
       - name: Bootstrap Lerna
         run: npm run lerna:bootstrap
-      - name: Test code
+      - name: Run tests
         run: npm run lerna:test
