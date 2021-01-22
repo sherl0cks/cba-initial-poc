@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "lerna": "lerna",
-    "lerna:bootstrap": "lerna bootstrap",
-    "lerna:test": "lerna run test --since master"
+    "lerna:bootstrap": "lerna bootstrap --since master",
+    "lerna:test": "lerna run test --since master",
+    "lerna:publish": "lerna publish --yes"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
