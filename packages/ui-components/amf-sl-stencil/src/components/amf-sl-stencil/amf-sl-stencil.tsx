@@ -24,7 +24,7 @@ export class AmfSlStencil {
   render() {
     let numbers = '';
     if(this.numbers.length) {
-      numbers = <p>Numbers</p>
+      numbers = <p>Number List</p>
     }
     return (
       <div>

@@ -11,7 +11,7 @@ describe('amf-sl-stencil', () => {
       <amf-sl-stencil>
         <mock:shadow-root>
           <div>
-          <p>Numbers</p>
+          <p>Number List</p>
           <ul>
             <li>1</li>
             <li>2</li>

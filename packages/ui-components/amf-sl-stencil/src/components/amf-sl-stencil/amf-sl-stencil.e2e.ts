@@ -15,7 +15,7 @@ describe('amf-sl-stencil', () => {
     await page.setContent('<amf-sl-stencil></amf-sl-stencil>');
     const component = await page.find('amf-sl-stencil');
     const element = await page.find('amf-sl-stencil >>> div');
-    expect(element.textContent).toEqual(`Numbers123`);
+    expect(element.textContent).toEqual(`Number List123`);
 
   });
 });
