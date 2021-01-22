@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/**"
+    "packages/ui-components/*",
+    "packages/utils/*"
   ],
   "version": "independent",
   "command": {
