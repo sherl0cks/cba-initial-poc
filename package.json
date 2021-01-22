@@ -6,7 +6,7 @@
     "lerna:bootstrap": "lerna bootstrap --since origin/master",
     "lerna:test": "lerna run test --since origin/master",
     "lerna:publish": "lerna publish from-package --yes",
-    "prepublish": "lerna run bootstrap --since HEAD~1"
+    "prepublish": "lerna bootstrap --since HEAD~1"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
