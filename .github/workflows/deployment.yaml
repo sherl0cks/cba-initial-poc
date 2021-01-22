@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 15
           registry-url: 'https://registry.npmjs.org'
@@ -21,11 +21,11 @@ jobs:
         run: npm run lerna:bootstrap
       - name: Run tests
         run: npm run lerna:test
-      - name: Build apckages
+      - name: Build packages
         run: npm run lerna:build
       - name: Deploy/publish to NPM
         run: npm run lerna:publish
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
