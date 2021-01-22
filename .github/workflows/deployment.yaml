@@ -16,7 +16,7 @@ jobs:
           node-version: 15
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Deploy/publish to NPM
         run: npm run lerna:publish
         env:
