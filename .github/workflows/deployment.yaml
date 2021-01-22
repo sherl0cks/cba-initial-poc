@@ -17,9 +17,11 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
         run: npm ci
-      - name: Boostrap Lerna
+      - name: Bootstrap Lerna
         run: npm run lerna:bootstrap
-      - name: Build and deploy to NPM 
+      - name: Build
+        run: npm run lerna:build
+      - name: Deploy/publish to NPM
         run: npm run lerna:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
