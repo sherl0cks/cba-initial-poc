@@ -1,3 +1,5 @@
+// V0.1.3
+
 export class SlCalculator {
 
     /**
