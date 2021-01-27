@@ -39,4 +39,10 @@ describe("sum()", () => {
         });
     });
 
+    describe("When summing 3 plus 3", () => {
+        test("should return 5", () => {
+            expect(calculator.sum(3, 2)).toEqual(5);
+        });
+    });
+
 })
