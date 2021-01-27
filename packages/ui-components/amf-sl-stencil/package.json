@@ -16,6 +16,8 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "build:watch": "npm run build -- --watch",
+    "start:storybook": "npm run build:watch & npm run --prefix ../../ storybook",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
