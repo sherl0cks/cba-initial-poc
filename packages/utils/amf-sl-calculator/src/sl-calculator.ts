@@ -8,7 +8,7 @@ export class SlCalculator {
      * @returns A number with the sum result
      */
     sum = (...numbers: Array<number>): number => {
-        console.log("f");
+        console.log("ff");
         if(!numbers.length) return 0;
         if(numbers.length === 1) {
             const number = numbers[0];
