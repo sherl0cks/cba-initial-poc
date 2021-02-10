@@ -1,6 +1,6 @@
 {
   "name": "amf-sl-calculator",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Test",
   "main": "build/index.js",
   "types": "build/index.d.ts",
